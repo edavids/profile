@@ -26,7 +26,7 @@ CACHES = {
 # Django Admin URL.
 ADMIN_URL = "admin/"
 ADMIN_DOC_URL = "admin/doc/"
-
+ADMIN_FILEBROWSER_URL = "admin/filebrowser/"
 
 # EMAIL
 # ------------------------------------------------------------------------------
