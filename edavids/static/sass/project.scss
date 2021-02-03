@@ -1,8 +1,59 @@
 
-@import "custom_bootstrap_vars";
-@import "bootstrap";
+// @import "custom_bootstrap_vars";
+// @import "bootstrap";
+
+// Initialize
+@import "variables";
+@import "mixins";
+
+// Bootstrap
+@import "bootstrap/bootstrap";
+
+// Core CSS
+@import "layouts";
+@import "typography";
+@import "utilities";
 
 
+// Content Blocks
+@import "topbar";
+@import "header";
+@import "sliders";
+@import "pagetitle";
+@import "content";
+@import "portfolio";
+@import "blog";
+@import "shop";
+@import "events";
+
+
+// Shortcodes
+@import "shortcodes";
+
+// Forms
+@import "forms";
+
+// Footer
+@import "footer";
+
+
+// Widgets
+@import "widgets";
+
+// Paginations
+@import "paginations";
+
+// Extras
+@import "extras";
+
+// Page Loaders
+@import "page-loaders";
+
+// Dark
+@import "dark";
+
+// RTL Template
+@import "style-rtl";
 
 
 // project specific CSS goes here

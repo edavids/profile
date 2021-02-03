@@ -1,1 +1,28 @@
 {% extends "base.html" %}
+{% load i18n compress %}
+{% block title %}About - {{block.super}}{% endblock title %}
+
+{% block description %}Read more about David Jeremiah as a developer.{% endblock description %}
+
+{% block css %}{% compress css %}{% include 'includes/pagecss.html' %}{% endcompress %}{% endblock css %}
+
+{% block bodyclass %}stretched{% endblock bodyclass %}
+
+{% block mainpage %}
+<div class="clearfix" id="wrapper">
+    {% include 'includes/nav.html' %}
+    {% include 'includes/messages.html' %}
+
+    <section id="content">
+        <div class="content-wrap p-0">
+
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+</div>
+{% include 'includes/totop.html' %}
+{% endblock mainpage %}
+
+
+{% block javascript %}{% compress js %}{% include 'includes/pagejs.html' %}{% endcompress %}{% endblock javascript %}

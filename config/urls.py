@@ -35,6 +35,9 @@ urlpatterns = [
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
+    path(
+        "under_construction/", TemplateView.as_view(template_name="pages/construction.html"), name="under-construction"
+    ),
     path('newsletter/', include('newsletter.urls')),
 
 

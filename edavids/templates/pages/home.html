@@ -1,1 +1,50 @@
 {% extends "base.html" %}
+{% load i18n compress %}
+
+{% block description %}David Jeremiah is a software engineer in Africa, he is a content creator, freelancer and creative designer.{% endblock description %}
+
+{% block css %}{% compress css %}{% include 'includes/pagecss.html' %}{% endcompress %}{% endblock css %}
+
+
+{% block bodyclass %}stretched{% endblock bodyclass %}
+
+{% block mainpage %}
+<div class="clearfix" id="wrapper">
+    {% include 'includes/messages.html' %}
+    {% include 'includes/nav.html' %}
+    {% include 'includes/hero.html' %}
+
+    <section id="content">
+        <div class="content-wrap p-0">
+            {% include 'includes/me.html' %}
+
+        </div>
+    </section>
+
+    {% include 'includes/footer.html' %}
+</div>
+{% include 'includes/totop.html' %}
+{% endblock mainpage %}
+
+{% block javascript %}{% compress js %}{% include 'includes/pagejs.html' %}{% endcompress %}{% endblock javascript %}
+
+{% block inline_javascript %}
+<script>
+    // Owl Carousel Scripts
+    jQuery(window).on( 'pluginCarouselReady', function(){
+        $('#oc-services').owlCarousel({
+            items: 1,
+            margin: 30,
+            nav: false,
+            dots: true,
+            smartSpeed: 400,
+            responsive:{
+                576: { stagePadding: 30, items: 1 },
+                768: { stagePadding: 30, items: 2 },
+                991: { stagePadding: 150, items: 3 },
+                1200: { stagePadding: 150, items: 3}
+            },
+        });
+    });
+</script>
+{% endblock inline_javascript %}
