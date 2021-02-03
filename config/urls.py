@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.conf.urls.static import static
+from filebrowser.sites import site
 from django.contrib import admin
 from django.urls import include, path
 from django.views import defaults as default_views
@@ -43,6 +44,8 @@ urlpatterns = [
     path('jet/', include('jet.urls', namespace='jet')),
     path('jet/dashboard/', include('jet.dashboard.urls', namespace='jet-dashboard')),
     # Django Admin, use {% url 'admin:index' %}
+    path(settings.ADMIN_FILEBROWSER_URL, site.urls),
+    path('grappelli/', include('grappelli.urls')),
     path(settings.ADMIN_URL, admin.site.urls),
     path(settings.ADMIN_DOC_URL, include('django.contrib.admindocs.urls')),
 
@@ -60,6 +63,7 @@ urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
+    path('tinymce/', include('tinymce.urls')),
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

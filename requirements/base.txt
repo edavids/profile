@@ -29,7 +29,6 @@ django-admin-honeypot==1.1.0
 django-autocomplete-light==3.5.0
 django-bootstrap4==1.1.1
 django-bootstrap-datepicker-plus==3.0.5
-django-ckeditor==6.0.0
 sweetify==2.0.0
 readtime==1.1.1
 django-cookie-consent==0.2.6
@@ -63,4 +62,12 @@ sorl-thumbnail==12.7.0
 
 # Favicon.ico
 # 
+------------------------------------------------------------------------------
 django-favicon==0.1.3
+
+# WYSIWIC Text Editors
+# 
+------------------------------------------------------------------------------
+django-ckeditor==6.0.0
+django-tinymce==3.2.0
+django-filebrowser==3.13.2
