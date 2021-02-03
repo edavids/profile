@@ -453,7 +453,7 @@ NEWSLETTER_CONFIRM_EMAIL = True
 NEWSLETTER_RICHTEXT_WIDGET = "ckeditor.widgets.CKEditorWidget"
 
 # Jet Config
-JET_DEFAULT_THEME = 'blue'
+JET_DEFAULT_THEME = 'light-blue'
 JET_SIDE_MENU_COMPACT = True
 # JET_INDEX_DASHBOARD = 'jet.dashboard.dashboard.DefaultIndexDashboard'
 # JET_APP_INDEX_DASHBOARD = 'jet.dashboard.dashboard.DefaultAppIndexDashboard'
@@ -467,4 +467,3 @@ HAYSTACK_CONNECTIONS = {
     }
 }
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
-FAVICON_PATH = STATIC_URL + 'images/favicons/favicon.ico'

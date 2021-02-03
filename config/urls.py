@@ -40,8 +40,8 @@ urlpatterns = [
 
 
     # Django Admin, use {% url 'admin:index' %}
-    path('jet/dashboard/', include('jet.dashboard.urls', namespace='jet-dashboard')),
     path('jet/', include('jet.urls', namespace='jet')),
+    path('jet/dashboard/', include('jet.dashboard.urls', namespace='jet-dashboard')),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     path(settings.ADMIN_DOC_URL, include('django.contrib.admindocs.urls')),
