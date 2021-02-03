@@ -103,8 +103,10 @@ THIRD_PARTY_APPS = [
     # News Letter
     'sorl.thumbnail',
     'newsletter',
-]
 
+    # Favicon.ico
+    'favicon',
+]
 LOCAL_APPS = [
     "edavids.users.apps.UsersConfig",
     # Your stuff: custom apps go here
@@ -465,3 +467,4 @@ HAYSTACK_CONNECTIONS = {
     }
 }
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+FAVICON_PATH = STATIC_URL + 'images/favicons/favicon.ico'

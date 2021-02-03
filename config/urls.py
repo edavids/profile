@@ -29,6 +29,7 @@ def trigger_error(request):
 
 urlpatterns = [
     path('sentry-debug/', trigger_error),
+    path('', include('favicon.urls')),
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
@@ -69,6 +70,7 @@ urlpatterns += [
     # DRF auth token
     path("auth-token/", obtain_auth_token),
 ]
+
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit
