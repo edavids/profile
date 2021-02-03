@@ -41,11 +41,11 @@ urlpatterns = [
 
 
     # Django Admin, use {% url 'admin:index' %}
+    path(settings.ADMIN_FILEBROWSER_URL, site.urls),
+    # path('grappelli/', include('grappelli.urls')),
     path('jet/', include('jet.urls', namespace='jet')),
     path('jet/dashboard/', include('jet.dashboard.urls', namespace='jet-dashboard')),
     # Django Admin, use {% url 'admin:index' %}
-    path(settings.ADMIN_FILEBROWSER_URL, site.urls),
-    path('grappelli/', include('grappelli.urls')),
     path(settings.ADMIN_URL, admin.site.urls),
     path(settings.ADMIN_DOC_URL, include('django.contrib.admindocs.urls')),
 
@@ -101,3 +101,5 @@ if settings.DEBUG:
         import debug_toolbar
 
         urlpatterns = [path("__debug__/", include(debug_toolbar.urls))] + urlpatterns
+
+site.directory = "uploads/"
