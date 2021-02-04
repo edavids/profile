@@ -1,11 +1,35 @@
-{% load static %}
+{% load static compress %}
 
 <!-- External JavaScripts
 ============================================= -->
 <script src="{% static 'js/jquery.js' %}"></script>
-<script src="{% static 'js/plugins.min.js' %}"></script>
-
 <!-- Footer Scripts
 ============================================= -->
 <script src="{% static 'js/functions.js' %}"></script>
+<script src="{% static 'js/plugins.min.js' %}"></script>
+<script src="{% static 'js/plugins.counter.js' %}"></script>
+<script src="{% static 'js/plugins.flexslider.js' %}"></script>
+<script src="{% static 'js/plugins.parallax.js' %}"></script>
+<script src="{% static 'js/plugins.easing.js' %}"></script>
+<script src="{% static 'js/plugins.swiper.js' %}"></script>
+<script src="{% static 'js/plugins.progress.js' %}"></script>
+<script src="{% static 'js/plugins.accordions.js' %}"></script>
+<script src="{% static 'js/plugins.form.js' %}"></script>
+<script src="{% static 'js/plugins.carousel.js' %}"></script>
+<script src="{% static 'js/plugins.textrotator.js' %}"></script>
+<script src="{% static 'js/plugins.bootstrap.js' %}"></script>
+<script src="{% static 'js/plugins.animations.js' %}"></script>
+<script src="{% static 'js/plugins.pricingswitcher.js' %}"></script>
+<script src="{% static 'js/plugins.lightbox.js' %}"></script>
+<script src="{% static 'js/plugins.ajaxform.js' %}"></script>
+
+
+<!-- Vendor dependencies bundled as one file-->
+{% compress js %}
+<script src="{% static 'js/plugins.flexslider.js' %}"></script>
+<!-- <script defer src="{% static 'js/vendors.js' %}"></script> -->
+{% endcompress %}
+{% compress js %}
+<script src="{% static 'js/sweetalert.min.js' %}"></script>
+{% endcompress %}
 
