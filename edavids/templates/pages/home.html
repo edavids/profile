@@ -6,10 +6,10 @@
 {% block css %}{% compress css %}{% include 'includes/pagecss.html' %}{% endcompress %}{% endblock css %}
 
 
-{% block bodyclass %}stretched{% endblock bodyclass %}
+{% block bodyclass %}class="stretched"{% endblock bodyclass %}
 
 {% block mainpage %}
-<div class="clearfix" id="wrapper">
+<div id="wrapper" class="clearfix">
     {% include 'includes/messages.html' %}
     {% include 'includes/nav.html' %}
     {% include 'includes/hero.html' %}

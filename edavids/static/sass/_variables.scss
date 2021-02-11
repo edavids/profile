@@ -1173,7 +1173,7 @@ $gradient-colors: (
 	earth: 								linear-gradient(to right, #649173, #dbd5a4),
 	sky: 								linear-gradient(to right, #2980b9, #6dd5fa, #F5F5F5),
 	ocean: 								linear-gradient(to right, #000046, #1cb5e0),
-	horizon: 							linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%),
+	horizon: 							linear-gradient(90deg, rgba(131,58,180,1) 0%, rgb(29, 70, 253) 50%, rgb(69, 231, 252) 100%),
 	green-blue: 						linear-gradient(to right, #43cea2, #185a9d),
 	purple-blue: 						linear-gradient(19deg, rgb(33, 212, 253) 0%, rgb(183, 33, 255) 100%),
 );

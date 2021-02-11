@@ -17,14 +17,14 @@ h1, h2, h3, h4, h5, h6, body { color: #333; }
 
 .gradient-red-yellow,
 .h-gradient-red-yellow:hover {
-	background-image:  -webkit-linear-gradient(110.78deg, rgb(118, 230, 80) -1.13%, rgb(249, 214, 73) 15.22%, rgb(240, 142, 53) 32.09%, rgb(236, 81, 87) 48.96%, rgb(255, 24, 189) 67.94%, rgb(26, 75, 255) 85.34%) !important;
-	background-image: linear-gradient(110.78deg, rgb(118, 230, 80) -1.13%, rgb(249, 214, 73) 15.22%, rgb(240, 142, 53) 32.09%, rgb(236, 81, 87) 48.96%, rgb(255, 24, 189) 67.94%, rgb(26, 75, 255) 85.34%) !important;
+	background-image:  -webkit-linear-gradient(110.78deg, rgb(80, 230, 223) -1.13%, rgb(73, 249, 225) 15.22%, rgb(53, 227, 240) 32.09%, rgb(81, 130, 236) 48.96%, rgb(255, 24, 189) 67.94%, rgb(26, 75, 255) 85.34%) !important;
+	background-image: linear-gradient(110.78deg, rgb(80, 230, 218) -1.13%, rgb(73, 249, 167) 15.22%, rgb(53, 234, 240) 32.09%, rgb(81, 205, 236) 48.96%, rgb(255, 24, 189) 67.94%, rgb(26, 75, 255) 85.34%) !important;
 }
 
 .menu-item.current > .menu-link,
 .menu-item:hover > .menu-link {
-	background-image: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-    background-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+	background-image: -webkit-linear-gradient(90deg, rgba(131,58,180,1) 0%, rgb(29, 107, 253) 50%, rgb(69, 194, 252) 100%);
+    background-image: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgb(29, 51, 253) 50%, rgb(69, 252, 176) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

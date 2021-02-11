@@ -10450,8 +10450,8 @@ a.h-text-dark:hover {
 
 .gradient-horizon,
 .h-gradient-horizon:hover {
-  background-image: -webkit-gradient(linear, left top, right top, from(#833ab4), color-stop(50%, #fd1d1d), to(#fcb045)) !important;
-  background-image: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcb045 100%) !important; }
+  background-image: -webkit-gradient(linear, left top, right top, from(#833ab4), color-stop(50%, #1d46fd), to(#45e7fc)) !important;
+  background-image: linear-gradient(90deg, #833ab4 0%, #1d46fd 50%, #45e7fc 100%) !important; }
 
 .gradient-green-blue,
 .h-gradient-green-blue:hover {

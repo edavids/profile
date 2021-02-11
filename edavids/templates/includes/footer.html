@@ -14,7 +14,7 @@
                     <div class="widget">
 
                         <h3 class="h1 mb-5">Got a Project?<br>Let's Talk!</h3>
-                        <span class="text-black-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quisquam aspernatur vero voluptas.</span>
+                        <span class="text-black-50">Feel free to contact me for any of your thecnical needs</span>
                         <a href="mailto:noreply@edavids.me" class="h4 text-dark mt-5 mb-4 d-block"><u>noreply@edavids.me</u> <i class="icon-line-arrow-right position-relative ml-2" style="top: 3px"></i></a>
                         <div>
                             <a href="http://facebook.com/edavidsme" class="social-icon si-small si-colored si-facebook" target="_blank">
@@ -29,9 +29,9 @@
                                 <i class="icon-youtube"></i>
                                 <i class="icon-youtube"></i>
                             </a>
-                            <a href="#" class="social-icon si-small si-colored si-flattr">
-                                <i class="icon-flattr"></i>
-                                <i class="icon-flattr"></i>
+                            <a href="http://twitter.com/edavidsme" class="social-icon si-small si-colored si-twitter">
+                                <i class="icon-twitter"></i>
+                                <i class="icon-twitter"></i>
                             </a>
                         </div>
 
@@ -39,33 +39,24 @@
                 </div>
 
                 <div class="col-md-5">
-                    <h3 class="h1 mb-5">Estimate your Project?</h3>
+                    <h3 class="h1 mb-5">Subscribe to edavids newsletter</h3>
                     <div class="form-widget" data-loader="button" data-alert-type="inline">
 
                         <div class="form-result"></div>
-
-                        <form class="row mb-0" id="landing-enquiry" action="include/form.php" method="post" enctype="multipart/form-data">
-                            <div class="form-process"></div>
+                        <form class="row mb-0" enctype="multipart/form-data" method="post" action="/newsletter/blog-update/subscribe/">
+                        {% csrf_token %}
                             <div class="col-12 form-group mb-4">
-                                <label>What is Your Name:</label>
-                                <input type="text" name="landing-enquiry-name" id="landing-enquiry-name" class="form-control border-form-control required" value="">
+                                <label for="id_name_field">Name:</label>
+                                <input type="text" name="name_field" required="" id="id_name_field" class="form-control border-form-control required" maxlength="120" value="">
+                                <span class="text-default text-small text-grey" style="font-weight:400; font-size:7 !important; color:grey">optional</span>
                             </div>
                             <div class="col-12 form-group mb-4">
-                                <label>Your Email Address Please:</label>
-                                <input type="email" name="landing-enquiry-email" id="landing-enquiry-email" class="form-control border-form-control required" value="">
-                            </div>
-                            <div class="col-12 form-group mb-4">
-                                <label>Tell more about your Project:</label>
-                                <textarea name="landing-enquiry-additional-requirements" id="landing-enquiry-additional-requirements" class="form-control border-form-control" cols="10" rows="3"></textarea>
-                            </div>
-                            <div class="col-12 d-none">
-                                <input type="text" id="landing-enquiry-botcheck" name="landing-enquiry-botcheck" value="" />
+                                <label for="id_email_field">Email:</label>
+                                <input type="email" name="email_field" required="" id="id_email_field" class="form-control border-form-control required" value="">
                             </div>
                             <div class="col-12">
-                                <button type="submit" name="landing-enquiry-submit" class="button h-translatey-3 bg-dark rounded-pill"><i class="icon-line-arrow-right m-0"></i></button>
+                                <button type="submit" id="id_submit" name="submit" class="button h-translatey-3 bg-dark btn-block rounded-pill"><i class="icon-line-arrow-right m-0"></i></button>
                             </div>
-
-                            <input type="hidden" name="prefix" value="landing-enquiry-">
                         </form>
                     </div>
                 </div>
