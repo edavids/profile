@@ -38,7 +38,7 @@ urlpatterns = [
     path(
         "under_construction/", TemplateView.as_view(template_name="pages/construction.html"), name="under-construction"
     ),
-    path('newsletter/', include('newsletter.urls')),
+    # path('newsletter/', include('newsletter.urls')),
 
 
 
@@ -63,6 +63,7 @@ urlpatterns = [
 
 
     # Your stuff: custom urls includes go here
+    path("newsletter/", include("edavids.subscribe.urls", namespace="newsletter")),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
     path('ckeditor/', include('ckeditor_uploader.urls')),

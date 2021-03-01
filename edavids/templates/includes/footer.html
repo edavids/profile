@@ -43,13 +43,8 @@
                     <div class="form-widget" data-loader="button" data-alert-type="inline">
 
                         <div class="form-result"></div>
-                        <form class="row mb-0" enctype="multipart/form-data" method="post" action="/newsletter/blog-update/subscribe/">
+                        <form class="row mb-0" enctype="multipart/form-data" method="post" action="{% url 'newsletter:subscribe' %}" novalidate>
                         {% csrf_token %}
-                            <div class="col-12 form-group mb-4">
-                                <label for="id_name_field">Name:</label>
-                                <input type="text" name="name_field" required="" id="id_name_field" class="form-control border-form-control required" maxlength="120" value="">
-                                <span class="text-default text-small text-grey" style="font-weight:400; font-size:7 !important; color:grey">optional</span>
-                            </div>
                             <div class="col-12 form-group mb-4">
                                 <label for="id_email_field">Email:</label>
                                 <input type="email" name="email_field" required="" id="id_email_field" class="form-control border-form-control required" value="">
