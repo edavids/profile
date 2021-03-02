@@ -1,9 +1,13 @@
 {% extends "base.html" %}
-{% load i18n compress %}
+{% load i18n static compress %}
 
-{% block description %}David Jeremiah is a Designer, Full Stack Developer &amp; Mentor.{% endblock description %}
-{% block ogdesc %}David Jeremiah is a Designer, Full Stack Developer &amp; Mentor.{% endblock ogdesc %}
-{% block css %}{% compress css inline %}{% include 'includes/pagecss.html' %}{% endcompress %}{% endblock css %}
+{% block description %}David Jeremiah is a Designer, Full Stack Developer & Mentor.{% endblock description %}
+{% block ogdesc %}David Jeremiah is a Designer, Full Stack Developer & Mentor.{% endblock ogdesc %}
+{% block css %}
+{% compress css inline %}
+{% include 'includes/pagecss.html' %}
+{% endcompress %}
+{% endblock css %}
 
 
 {% block bodyclass %}class="stretched"{% endblock bodyclass %}
@@ -26,8 +30,11 @@
 {% include 'includes/totop.html' %}
 {% endblock mainpage %}
 
-{% block javascript %}{% compress js inline %}{% include 'includes/pagejs.html' %}{% endcompress %}{% endblock
-javascript %}
+{% block javascript %}
+{% compress js inline %}
+{% include 'includes/pagejs.html' %}
+{% endcompress %}
+{% endblock javascript %}
 
 {% block inline_javascript %}
 {% compress js inline %}
