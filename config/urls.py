@@ -7,9 +7,10 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 from django.contrib.sitemaps.views import sitemap
-from config.sitemaps import  StaticViewSitemap
+from config.sitemaps import StaticViewSitemap
+
 sitemaps = {
-    'static': StaticViewSitemap,
+    "static": StaticViewSitemap,
     # 'awards':GenericSitemap({
     #     'queryset': Award.objects.all(),
     #     'date_field': 'updated',
@@ -25,49 +26,62 @@ sitemaps = {
     #     'date_field': 'updated',
     # }, priority=0.9),
 }
+
+
 def trigger_error(request):
     division_by_zero = 1 / 0
+    return division_by_zero
+
 
 urlpatterns = [
-    path('sentry-debug/', trigger_error),
-    path('', include('favicon.urls')),
+    path("sentry-debug/", trigger_error),
+    path("", include("favicon.urls")),
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
     path(
-        "under_construction/", TemplateView.as_view(template_name="pages/construction.html"), name="under-construction"
+        "projects/",
+        TemplateView.as_view(template_name="pages/construction.html"),
+        name="works",
+    ),
+    # Privacy Policy and the rest
+    path(
+        "terms/", TemplateView.as_view(template_name="pages/terms.html"), name="terms"
+    ),
+    path(
+        "policy/", TemplateView.as_view(template_name="pages/policy.html"), name="policy"
+    ),
+    path(
+        "cookies/", TemplateView.as_view(template_name="pages/cookies.html"), name="cookies"
+    ),
+
+    path(
+        "underconstruction/",
+        TemplateView.as_view(template_name="pages/construction.html"),
+        name="under-construction",
     ),
     # path('newsletter/', include('newsletter.urls')),
-
-
-
-
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_FILEBROWSER_URL, site.urls),
     # path('grappelli/', include('grappelli.urls')),
-    path('jet/', include('jet.urls', namespace='jet')),
-    path('jet/dashboard/', include('jet.dashboard.urls', namespace='jet-dashboard')),
+    path("jet/", include("jet.urls", namespace="jet")),
+    path("jet/dashboard/", include("jet.dashboard.urls", namespace="jet-dashboard")),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
-    path(settings.ADMIN_DOC_URL, include('django.contrib.admindocs.urls')),
-
-
-
-
+    path(settings.ADMIN_DOC_URL, include("django.contrib.admindocs.urls")),
     # User management
     path("users/", include("edavids.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
-
-
-
-
     # Your stuff: custom urls includes go here
     path("newsletter/", include("edavids.subscribe.urls", namespace="newsletter")),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
-    path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
-    path('tinymce/', include('tinymce.urls')),
+    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap"),
+    path(
+        "robots.txt",
+        TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
+    ),
+    path("ckeditor/", include("ckeditor_uploader.urls")),
+    path("tinymce/", include("tinymce.urls")),
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
