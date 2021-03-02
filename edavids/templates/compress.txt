@@ -3,3 +3,27 @@
 <!-- This file stores project-specific CSS -->
 
 {% endcompress %}
+
+
+<!-- <script src="{% static 'js/plugins.counter.js' %}"></script>
+<script src="{% static 'js/plugins.flexslider.js' %}" defer></script>
+<script src="{% static 'js/plugins.parallax.js' %}" defer></script>
+<script src="{% static 'js/plugins.easing.js' %}" defer></script>
+<script src="{% static 'js/plugins.swiper.js' %}" defer></script>
+<script src="{% static 'js/plugins.progress.js' %}" defer></script>
+<script src="{% static 'js/plugins.accordions.js' %}" defer></script>
+<script src="{% static 'js/plugins.form.js' %}" defer></script>
+<script src="{% static 'js/plugins.carousel.js' %}" defer></script>
+<script src="{% static 'js/plugins.textrotator.js' %}" defer></script>
+<script src="{% static 'js/plugins.bootstrap.js' %}" defer></script>
+<script src="{% static 'js/plugins.animations.js' %}" defer></script>
+<script src="{% static 'js/plugins.pricingswitcher.js' %}" defer></script>
+<script src="{% static 'js/plugins.lightbox.js' %}" defer></script>
+<script src="{% static 'js/plugins.ajaxform.js' %}" defer></script>
+<script src="{% static 'js/plugins.linkscroll.js' %}" defer></script>
+<script src="{% static 'js/plugins.shapedivider.js' %}" defer></script> -->
+
+
+<!-- Vendor dependencies bundled as one file-->
+<!-- <script src="{% static 'js/plugins.flexslider.js' %}" defer></script> -->
+
