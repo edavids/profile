@@ -16,8 +16,8 @@
   <meta property="og:type" content="website">
   <meta property="og:description" content="{% block ogdesc %}{% endblock ogdesc %}
   ">
-  <link rel="canonical" href="https://edavids.me">
-  <meta property="og:url" content="http://edavids.me">
+  <link rel="canonical" href="{% url 'home' %}">
+  <meta property="og:url" content="{% url 'home' %}>
   <meta property="og:site_name" content="Jeremiah David">
   <meta property="og:image" content="{% static 'images/logo@2x.png' %}">
   <meta name="twitter:card" content="summary">
@@ -84,8 +84,6 @@
   {# Script tags with only code, no src (defer by default) #}
   {% endblock inline_javascript %}
 
-  <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9 "></script>
-    <script src="{% static 'js/sweetalert.min.js' %}"></script> -->
 
   {% load sweetify %}
   {% sweetify %}
