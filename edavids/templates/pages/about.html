@@ -4,7 +4,7 @@
 
 {% block description %}Read more about David Jeremiah as a developer.{% endblock description %}
 
-{% block css %}{% include 'includes/pagecss.html' %}{% endblock css %}
+{% block css %}{% compress css inline %}{% include 'includes/pagecss.html' %}{% endcompress %}{% endblock css %}
 
 {% block bodyclass %}class="stretched"{% endblock bodyclass %}
 
@@ -50,4 +50,4 @@
 {% endblock mainpage %}
 
 
-{% block javascript %}{% include 'includes/pagejs.html' %}{% endblock javascript %}
+{% block javascript %}{% compress js inline %}{% include 'includes/pagejs.html' %}{% endcompress %}{% endblock javascript %}
