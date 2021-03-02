@@ -1,4 +1,6 @@
-{% load static i18n compress bootstrap4 %}<!DOCTYPE html>
+{% load static i18n compress bootstrap4 %}
+{% spaceless %}
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -22,7 +24,7 @@
 
 
     <!-- Your stuff: Third-party CSS libraries go here -->
-    {% compress css %}
+    {% compress css inline %}
     <!-- This file stores project-specific CSS -->
 
     {% endcompress %}
@@ -50,7 +52,7 @@
 
 
       <!-- place project specific Javascript in this file -->
-      {% compress js %}
+      {% compress js inline %}
       <script defer src="{% static 'js/project.js' %}"></script>
       {% endcompress %}
 
@@ -62,11 +64,12 @@
     {# Script tags with only code, no src (defer by default) #}
     {% endblock inline_javascript %}
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9 "></script>
-    <script src="{% static 'js/sweetalert.min.js' %}"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9 "></script>
+    <script src="{% static 'js/sweetalert.min.js' %}"></script> -->
 
     {% load sweetify %} 
     {% sweetify %}
 
   </body>
 </html>
+{% endspaceless %}

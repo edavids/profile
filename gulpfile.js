@@ -89,6 +89,13 @@ function scripts() {
     .pipe(rename({ suffix: '.min' }))
     .pipe(dest(paths.js));
 }
+function scripts() {
+  return src(`${paths.js}/jquery.js`)
+    .pipe(plumber()) // Checks for errors
+    .pipe(uglify()) // Minifies the js
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(dest(paths.js));
+}
 
 
 // Vendor Javascript minification

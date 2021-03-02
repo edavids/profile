@@ -162,6 +162,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
 MIDDLEWARE = [
+    # minify html
+    "django.middleware.gzip.GZipMiddleware",
+    'htmlmin.middleware.HtmlMinifyMiddleware',
+    'htmlmin.middleware.MarkRequestMiddleware',
+
     "django.middleware.security.SecurityMiddleware",
     "corsheaders.middleware.CorsMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -173,6 +178,12 @@ MIDDLEWARE = [
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
+# MINIFY HTML
+HTML_MINIFY = True
+EXCLUDE_FROM_MINIFYING = ('/admin/', '/jet/', '/jet/dashboard/')
+KEEP_COMMENTS_ON_MINIFYING = True
+
 
 # STATIC
 # ------------------------------------------------------------------------------

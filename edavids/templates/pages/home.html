@@ -3,7 +3,7 @@
 
 {% block description %}David Jeremiah is a software engineer in Africa, he is a content creator, freelancer and creative designer.{% endblock description %}
 
-{% block css %}{% include 'includes/pagecss.html' %}{% endblock css %}
+{% block css %}{% compress css inline %}{% include 'includes/pagecss.html' %}{% endcompress %}{% endblock css %}
 
 
 {% block bodyclass %}class="stretched"{% endblock bodyclass %}
@@ -26,9 +26,10 @@
 {% include 'includes/totop.html' %}
 {% endblock mainpage %}
 
-{% block javascript %}{% include 'includes/pagejs.html' %}{% endblock javascript %}
+{% block javascript %}{% compress js inline %}{% include 'includes/pagejs.html' %}{% endcompress %}{% endblock javascript %}
 
 {% block inline_javascript %}
+{% compress js inline %}
 <script>
     // Owl Carousel Scripts
     jQuery(window).on( 'pluginCarouselReady', function(){
@@ -47,4 +48,5 @@
         });
     });
 </script>
+{% endcompress %}
 {% endblock inline_javascript %}
