@@ -10,18 +10,18 @@
 
 {% block mainpage %}
 <div id="wrapper" class="clearfix">
-    {% include 'includes/messages.html' %}
-    {% include 'includes/nav.html' %}
-    {% include 'includes/hero.html' %}
+  {% include 'includes/messages.html' %}
+  {% include 'includes/nav.html' %}
+  {% include 'includes/hero.html' %}
 
-    <section id="content">
-        <div class="content-wrap p-0">
-            {% include 'includes/me.html' %}
+  <section id="content">
+    <div class="content-wrap p-0">
+      {% include 'includes/me.html' %}
 
-        </div>
-    </section>
+    </div>
+  </section>
 
-    {% include 'includes/footer.html' %}
+  {% include 'includes/footer.html' %}
 </div>
 {% include 'includes/totop.html' %}
 {% endblock mainpage %}
@@ -32,22 +32,22 @@ javascript %}
 {% block inline_javascript %}
 {% compress js inline %}
 <script>
-    // Owl Carousel Scripts
-    jQuery(window).on('pluginCarouselReady', function () {
-        $('#oc-services').owlCarousel({
-            items: 1,
-            margin: 30,
-            nav: false,
-            dots: true,
-            smartSpeed: 400,
-            responsive: {
-                576: { stagePadding: 30, items: 1 },
-                768: { stagePadding: 30, items: 2 },
-                991: { stagePadding: 150, items: 3 },
-                1200: { stagePadding: 150, items: 3 }
-            },
-        });
+  // Owl Carousel Scripts
+  jQuery(window).on('pluginCarouselReady', function () {
+    $('#oc-services').owlCarousel({
+      items: 1,
+      margin: 30,
+      nav: false,
+      dots: true,
+      smartSpeed: 400,
+      responsive: {
+        576: { stagePadding: 30, items: 1 },
+        768: { stagePadding: 30, items: 2 },
+        991: { stagePadding: 150, items: 3 },
+        1200: { stagePadding: 150, items: 3 }
+      },
     });
+  });
 </script>
 {% endcompress %}
 {% endblock inline_javascript %}
