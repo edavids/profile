@@ -50,12 +50,15 @@ urlpatterns = [
         "terms/", TemplateView.as_view(template_name="pages/terms.html"), name="terms"
     ),
     path(
-        "policy/", TemplateView.as_view(template_name="pages/policy.html"), name="policy"
+        "policy/",
+        TemplateView.as_view(template_name="pages/policy.html"),
+        name="policy",
     ),
     path(
-        "cookies/", TemplateView.as_view(template_name="pages/cookies.html"), name="cookies"
+        "cookies/",
+        TemplateView.as_view(template_name="pages/cookies.html"),
+        name="cookies",
     ),
-
     path(
         "underconstruction/",
         TemplateView.as_view(template_name="pages/construction.html"),
@@ -75,7 +78,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
     path("newsletter/", include("edavids.subscribe.urls", namespace="newsletter")),
-    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap"),
+    path("private/links/sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap"),
     path(
         "robots.txt",
         TemplateView.as_view(template_name="robots.txt", content_type="text/plain"),
