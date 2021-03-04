@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% load i18n static compress %}
 
+{% block cano %}{% url 'home' %}{% endblock cano %}
+{% block ogurl %}{% url 'home' %}{% endblock ogurl %}
 {% block description %}David Jeremiah is a Designer, Full Stack Developer & Mentor.{% endblock description %}
 {% block ogdesc %}David Jeremiah is a Designer, Full Stack Developer & Mentor.{% endblock ogdesc %}
+{% block twitdesc %}David Jeremiah is a Designer, Full Stack Developer &amp; Mentor. I enjoy long hours spent writing clean codes for web or mobile applications.{% endblock twitdesc %}
 {% block css %}
 {% compress css inline %}
 {% include 'includes/pagecss.html' %}

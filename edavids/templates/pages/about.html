@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 {% load i18n compress static %}
-{% block title %}About - {{block.super}}{% endblock title %}
+{% block title %}About | {{block.super}}{% endblock title %}
+{% block cano %}{% url 'about' %}{% endblock cano %}
+{% block ogurl %}{% url 'about' %}{% endblock ogurl %}
 
 {% block description %}Read more about David Jeremiah as a Full Stack Developer &amp; Mentor.{% endblock description %}
 {% block ogdesc %}Read more about David Jeremiah as a Full Stack Developer &amp; Mentor.{% endblock ogdesc %}
-
+{% block twitdesc %}Read more about David Jeremiah as a Full Stack Developer &amp; Mentor.{% endblock twitdesc %}
+{% block keywords %}what is edavids, who is edavids, edavids mission, edavids projects, edavids about{% endblock keywords %}
 {% block css %}{% compress css inline %}{% include 'includes/pagecss.html' %}{% endcompress %}{% endblock css %}
 
 {% block bodyclass %}class="stretched"{% endblock bodyclass %}
