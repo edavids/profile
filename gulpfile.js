@@ -154,7 +154,7 @@ const generateAssets = parallel(
   styles,
   scripts,
   vendorScripts
-  // imgCompression
+  imgCompression
 );
 
 // Set up dev environment
