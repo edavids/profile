@@ -1,8 +1,8 @@
 @font-face {
-  font-display: auto;
+  font-display: swap;
   font-family: "font-icons";
-  src: url("../fonts/font-icons.eot");
-  src: url("../fonts/font-icons.eot") format("embedded-opentype"),
+  src: local('Ubuntu') url("../fonts/font-icons.eot");
+  src: local('Ubuntu') url("../fonts/font-icons.eot") format("embedded-opentype"),
     url("https://edavids-bucket.s3.amazonaws.com/static/css/fonts/font-icons.woff") format("woff"),
     url("../fonts/font-icons.ttf") format("truetype"),
     url("../fonts/font-icons.svg") format("svg");
@@ -11,10 +11,10 @@
 }
 
 @font-face {
-  font-display: auto;
+  font-display: swap;
   font-family: "lined-icons";
-  src: url("../fonts/lined-icons.eot");
-  src: url("../fonts/lined-icons.eot") format("embedded-opentype"),
+  src: local('Ubuntu') url("../fonts/lined-icons.eot");
+  src: local('Ubuntu') url("../fonts/lined-icons.eot") format("embedded-opentype"),
     url("https://edavids-bucket.s3.amazonaws.com/static/css/fonts/lined-icons.woff") format("woff"),
     url("../fonts/lined-icons.ttf") format("truetype"),
     url("../fonts/lined-icons.svg") format("svg");
@@ -23,10 +23,10 @@
 }
 
 @font-face {
-  font-display: auto;
+  font-display: swap;
   font-family: "Simple-Line-Icons";
-  src: url("../fonts/Simple-Line-Icons.eot");
-  src: url("../fonts/Simple-Line-Icons.eot?#iefix") format("embedded-opentype"),
+  src: local('Ubuntu') url("../fonts/Simple-Line-Icons.eot");
+  src: local('Ubuntu') url("../fonts/Simple-Line-Icons.eot?#iefix") format("embedded-opentype"),
     url("https://edavids-bucket.s3.amazonaws.com/static/css/fonts/Simple-line-icons.woff") format("woff"),
     url("https://edavids-bucket.s3.amazonaws.com/static/css/fonts/Simple-line-icons.ttf") format("truetype"),
     url("../fonts/Simple-Line-Icons.svg#Simple-Line-Icons") format("svg");
