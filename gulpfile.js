@@ -153,8 +153,8 @@ function watchPaths() {
 const generateAssets = parallel(
   styles,
   scripts,
-  vendorScripts
-  // imgCompression
+  vendorScripts,
+  imgCompression
 );
 
 // Set up dev environment

@@ -2,6 +2,7 @@
   "name": "edavids",
   "version": "0.1.0",
   "dependencies": {
+    "django-lazy-image": "^0.5.2",
     "gulp-install": "^1.1.0"
   },
   "devDependencies": {
@@ -12,7 +13,8 @@
     "cssnano": "^4.1.10",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^5.0.3",
+    "gulp-cli": "2.3.0",
+    "gulp-imagemin": "7.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.2.2",
