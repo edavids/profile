@@ -2,7 +2,6 @@
   "name": "edavids",
   "version": "0.1.0",
   "dependencies": {
-    "django-lazy-image": "^0.5.2",
     "gulp-install": "^1.1.0"
   },
   "devDependencies": {
