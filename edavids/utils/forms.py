@@ -27,8 +27,8 @@ class ContactForm(forms.Form):
         self.helper = FormHelper()
         self.helper.layout = Layout(
             Row(
-                Column("email", css_class="form-group col-6 mb-0"),
-                Column("phone", css_class="form-group col-6 mb-0"),
+                Column("email", css_class="form-group col-md-6 col-sm-12 mb-0"),
+                Column("phone", css_class="form-group col-md-6 col-sm-12 mb-0"),
                 Column("name", css_class="form-group col-12 mb-0"),
                 Column("company", css_class="form-group col-12 mb-0"),
                 Column("message", css_class="form-group col-12 mb-0"),

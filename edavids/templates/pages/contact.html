@@ -26,7 +26,7 @@ contact edavids, edavids contact, edavids message, message edavids, contact jere
 
         <div class="row justify-content-between">
 
-          <div class="col-md-4">
+          <div class="col-md-4 mb-5">
             <div class="widget">
 
               <h1 class="text-bold mb-2">Contact <span class="gradient-text gradient-horizon">Edavids</span></h1>
@@ -35,22 +35,22 @@ contact edavids, edavids contact, edavids message, message edavids, contact jere
               <hr>
               <abbr title="Phone Number"><strong>Phone: </strong></abbr> <a href="tel://+2347064857582"> (234) 7064
                 857582</a><br>
-              <abbr title="Email Address"><strong>Email: </strong></abbr> <a
-                href="mailto://hello@edavids.me"> hello@edavids.me</a><br>
+              <abbr title="Email Address"><strong>Email: </strong></abbr> <a href="mailto://hello@edavids.me">
+                hello@edavids.me</a><br>
               <abbr title="Store"><strong>website: </strong></abbr> <a href="{% url 'home' %}"><u> edavids.me</u></a>
               <div class="mt-4">
-                <a href="https://www.facebook.com/jeremiahedavid/" class="social-icon si-small si-colored rounded-0 si-facebook"
-                  target="_blank">
+                <a href="https://www.facebook.com/jeremiahedavid/"
+                  class="social-icon si-small si-colored rounded-0 si-facebook" target="_blank">
                   <i class="icon-facebook"></i>
                   <i class="icon-facebook"></i>
                 </a>
-                <a href="http://instagram.com/me_edavids/" class="social-icon si-small si-colored rounded-0 si-instagram"
-                  target="_blank">
+                <a href="http://instagram.com/me_edavids/"
+                  class="social-icon si-small si-colored rounded-0 si-instagram" target="_blank">
                   <i class="icon-instagram"></i>
                   <i class="icon-instagram"></i>
                 </a>
-                <a href="http://linkedin.com/in/me-edavids/" class="social-icon si-small si-colored rounded-0 si-linkedin"
-                  target="_blank">
+                <a href="http://linkedin.com/in/me-edavids/"
+                  class="social-icon si-small si-colored rounded-0 si-linkedin" target="_blank">
                   <i class="icon-linkedin"></i>
                   <i class="icon-linkedin"></i>
                 </a>
@@ -69,13 +69,14 @@ contact edavids, edavids contact, edavids message, message edavids, contact jere
           </div>
 
           <div class="col-md-5">
-            <h3 class="h1 mb-5">Send your Message</h3>
+            <div class="container">
+              <h3 class="h1 mb-5">Send your Message</h3>
 
-            <form action="{% url 'contact' %}" class="row mb-0" method="post">
-              {%csrf_token%}
-              {% crispy form %}
-            </form>
-
+              <form action="{% url 'contact' %}" class="row mb-0" method="post">
+                {%csrf_token%}
+                {% crispy form %}
+              </form>
+            </div>
           </div>
 
         </div>
@@ -85,7 +86,6 @@ contact edavids, edavids contact, edavids message, message edavids, contact jere
 
   </section><!-- #footer end -->
 
-  {% include 'includes/footer.html' %}
 </div>
 {% include 'includes/totop.html' %}
 {% endblock mainpage %}

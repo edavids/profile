@@ -18,12 +18,12 @@ def contact_page(request):
         subject = "Contact From Website"
         from_email = form.cleaned_data['email']
         phone = form.cleaned_data['phone']
-        message = "{name} from {company} - has sent a message: \n\n Phone: ({phone}) \n\n Subject: {subject} \n\n Email: {email} \n\n Message: {message}".format(name=name, phone=phone, company=company, subject=subject, email=from_email, message=form.cleaned_data['message'])
+        message = "{name} - has sent a message: \n\n Phone: {phone} \n\n Subject: {subject} \n\n Email: {email} \n\n Message: {message}".format(name=name, phone=phone, company=company, subject=subject, email=from_email, message=form.cleaned_data['message'])
         try:
             send_mail(
                 subject, 
                 message, 
-                from_email, 
+                "noreply@edavids.me", 
                 [settings.DEFAULT_FROM_EMAIL], 
                 fail_silently=False
             )
