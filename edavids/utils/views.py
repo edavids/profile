@@ -15,7 +15,7 @@ def contact_page(request):
         form = contact_form
         name = form.cleaned_data['name']
         company = form.cleaned_data['company']
-        subject = form.cleaned_data['subject']
+        subject = "Contact From Website"
         from_email = form.cleaned_data['email']
         phone = form.cleaned_data['phone']
         message = "{name} from {company} - has sent a message: \n\n Phone: ({phone}) \n\n Subject: {subject} \n\n Email: {email} \n\n Message: {message}".format(name=name, phone=phone, company=company, subject=subject, email=from_email, message=form.cleaned_data['message'])
