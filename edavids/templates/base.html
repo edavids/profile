@@ -19,14 +19,13 @@
   ">
   <link rel="canonical" href="{% block cano %}{% endblock cano %}">
   <meta property="og:url" content="{% block ogurl %}{% endblock ogurl %}>
-  <meta property="og:site_name" content="Jeremiah David">
+  <meta property=" og:site_name" content="Jeremiah David">
   <meta property="og:image" content="{% static 'images/logo@2x.png' %}">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@me_edavids">
   <meta name="twitter:creator" content="@me_edavids">
   <meta name="twitter:title" content="Jeremiah David">
-  <meta name="twitter:description"
-    content="{% block twitdesc %}{% endblock twitdesc %}">
+  <meta name="twitter:description" content="{% block twitdesc %}{% endblock twitdesc %}">
   <meta name="twitter:image" content="{% static 'images/logo@2x.png' %}">
   <meta name="twitter:image:alt" content="Me Edavids">
   <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -38,7 +37,8 @@
   <link href="http://fonts.googleapis.com/css?family=Heebo:300,400,500,700,900&display=swap" rel="preload" as="style"
     onload="this.onload=null;this.rel='stylesheet'" type="text/css" />
   <noscript>
-    <link href="http://fonts.googleapis.com/css?family=Heebo:300,400,500,700,900&display=swap" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Heebo:300,400,500,700,900&display=swap" rel="stylesheet"
+      type="text/css" />
   </noscript>
 
 
@@ -76,6 +76,8 @@
   <!-- place project specific Javascript in this file -->
   {% compress js inline %}
   <script defer src="{% static 'js/project.js' %}"></script>
+  <script defer type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+  <script defer type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
   {% endcompress %}
 
   {% endblock javascript %}

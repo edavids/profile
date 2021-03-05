@@ -5,6 +5,7 @@
 ============================================= -->
 <footer id="footer" class="border-0 bg-white">
 
+    {% if not request.path == "/contact/" %}
     <div class="container">
         <div class="footer-widgets-wrap  m-0">
 
@@ -49,31 +50,17 @@
                 </div>
 
                 <div class="col-md-5">
-                    <h3 class="h1 mb-5">Subscribe to edavids newsletter</h3>
-                    <div class="form-widget" data-loader="button" data-alert-type="inline">
-
-                        <div class="form-result"></div>
-                        <form class="row mb-0" enctype="multipart/form-data" method="post"
-                            action="{% url 'newsletter:subscribe' %}" novalidate>
-                            {% csrf_token %}
-                            <div class="col-12 form-group mb-4">
-                                <label for="id_email_field">Email:</label>
-                                <input type="email" name="email_field" required="" id="id_email_field"
-                                    class="form-control border-form-control required" value="">
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" id="id_submit" name="submit"
-                                    class="button h-translatey-3 bg-dark btn-block rounded-pill"><i
-                                        class="icon-line-arrow-right m-0"></i></button>
-                            </div>
-                        </form>
-                    </div>
+                    <h3 class="h2 mb-2">Get Updates</h3>
+                    <span class="text-black-50">Subscribe to Our Newsletter to get Important News, Amazing Offers &
+                        Inside Scoops:</span>
+                    
                 </div>
 
             </div>
 
         </div>
     </div>
+    {% endif %}
 
     <!-- Copyrights
 	============================================= -->

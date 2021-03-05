@@ -8,6 +8,7 @@ from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 from django.contrib.sitemaps.views import sitemap
 from config.sitemaps import StaticViewSitemap
+from edavids.utils.views import Contact
 
 sitemaps = {
     "static": StaticViewSitemap,
@@ -40,6 +41,7 @@ urlpatterns = [
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
+    path("contact/", Contact.as_view(), name="contact"),
     path(
         "projects/",
         TemplateView.as_view(template_name="pages/construction.html"),
@@ -64,7 +66,7 @@ urlpatterns = [
         TemplateView.as_view(template_name="pages/construction.html"),
         name="under-construction",
     ),
-    # path('newsletter/', include('newsletter.urls')),
+    path('newsletter/', include('newsletter.urls')),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_FILEBROWSER_URL, site.urls),
     # path('grappelli/', include('grappelli.urls')),

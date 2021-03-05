@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load i18n compress static crispy_forms_tags %}
+{% block title %}Contact | {{block.super}}{% endblock title %}
+{% block cano %}{% url 'contact' %}{% endblock cano %}
+{% block ogurl %}{% url 'contact' %}{% endblock ogurl %}
+
+{% block description %}Feel free to contact us with your complaints or enquires.{% endblock description %}
+{% block ogdesc %}Feel free to contact us with your complaints or enquires{% endblock ogdesc %}
+{% block twitdesc %}Feel free to contact us with your complaints or enquires{% endblock twitdesc %}
+{% block keywords %}
+contact edavids, edavids contact, edavids message, message edavids, contact jeremiah david
+{% endblock keywords %}
+{% block css %}{% compress css inline %}{% include 'includes/pagecss.html' %}{% endcompress %}{% endblock css %}
+
+{% block bodyclass %}class="stretched"{% endblock bodyclass %}
+
+{% block mainpage %}
+<div class="clearfix" id="wrapper">
+  {% include 'includes/nav.html' %}
+  {% include 'includes/messages.html' %}
+
+  <section class="border-0 section mt-0 mb-0">
+
+    <div class="container">
+      <div class="footer-widgets-wrap  m-0">
+
+        <div class="row justify-content-between">
+
+          <div class="col-md-4">
+            <div class="widget">
+
+              <h1 class="text-bold mb-2">Contact <span class="gradient-text gradient-horizon">Edavids</span></h1>
+              <span class="text-black-50">Thanks for taking the time to reach out.<br>How can I help you?</span>
+              <br>
+              <hr>
+              <abbr title="Phone Number"><strong>Phone: </strong></abbr> <a href="tel://+2347064857582"> (234) 7064
+                857582</a><br>
+              <abbr title="Email Address"><strong>Email: </strong></abbr> <a
+                href="mailto://hello@edavids.me"> hello@edavids.me</a><br>
+              <abbr title="Store"><strong>website: </strong></abbr> <a href="{% url 'home' %}"><u> edavids.me</u></a>
+              <div class="mt-4">
+                <a href="https://www.facebook.com/jeremiahedavid/" class="social-icon si-small si-colored rounded-0 si-facebook"
+                  target="_blank">
+                  <i class="icon-facebook"></i>
+                  <i class="icon-facebook"></i>
+                </a>
+                <a href="http://instagram.com/me_edavids/" class="social-icon si-small si-colored rounded-0 si-instagram"
+                  target="_blank">
+                  <i class="icon-instagram"></i>
+                  <i class="icon-instagram"></i>
+                </a>
+                <a href="http://linkedin.com/in/me-edavids/" class="social-icon si-small si-colored rounded-0 si-linkedin"
+                  target="_blank">
+                  <i class="icon-linkedin"></i>
+                  <i class="icon-linkedin"></i>
+                </a>
+                <a href="http://twitter.com/me_edavids/" class="social-icon si-small si-colored rounded-0 si-twitter"
+                  target="_blank">
+                  <i class="icon-twitter"></i>
+                  <i class="icon-twitter"></i>
+                </a>
+                <a href="http://github.com/me-edavids/" class="social-icon si-small si-colored rounded-0 si-github"
+                  target="_blank">
+                  <i class="icon-github-alt"></i>
+                  <i class="icon-github-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <h3 class="h1 mb-5">Send your Message</h3>
+
+            <form action="{% url 'contact' %}" class="row mb-0" method="post">
+              {%csrf_token%}
+              {% crispy form %}
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </section><!-- #footer end -->
+
+  {% include 'includes/footer.html' %}
+</div>
+{% include 'includes/totop.html' %}
+{% endblock mainpage %}
+
+
+{% block javascript %}
+{% compress js inline %}
+{% include 'includes/pagejs.html' %}
+{% endcompress %}
+{% endblock javascript %}

@@ -39,6 +39,7 @@ function pathsConfig(appName) {
 
     app: this.app,
     templates: `${this.app}/templates`,
+    media: `${this.app}/media`,
     css: `${this.app}/static/css`,
     sass: `${this.app}/static/sass`,
     fonts: `${this.app}/static/fonts`,
@@ -115,6 +116,11 @@ function imgCompression() {
   return src(`${paths.images}/*`)
     .pipe(imagemin()) // Compresses PNG, JPEG, GIF and SVG images
     .pipe(dest(paths.images));
+}
+function imgCompression() {
+  return src(`${paths.media}/*`)
+    .pipe(imagemin()) // Compresses PNG, JPEG, GIF and SVG images
+    .pipe(dest(paths.media));
 }
 
 

@@ -60,7 +60,7 @@ django-countries==7.0
 
 # Django Newsletter
 # ------------------------------------------------------------------------------
-# django-newsletter==0.9.1
+django-newsletter==0.9.1
 # sorl-thumbnail==12.7.0
 # django-favicon==0.1.3
 

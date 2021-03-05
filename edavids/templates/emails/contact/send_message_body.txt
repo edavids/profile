@@ -1,0 +1,4 @@
+{{message|linebreaks|safe}}
+
+---------------------------
+Sent via Edavids ContactForm

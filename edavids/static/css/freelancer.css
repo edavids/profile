@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6, body { color: #333; }
 }
 
 .emphasis-title h1 {
-	font-size: calc(8.82629vw + 12.9014px) !important;
+	font-size: calc(7.22629vw + 12.9014px) !important;
 	font-weight: 900;
 }
 

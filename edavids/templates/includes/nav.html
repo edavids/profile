@@ -2,18 +2,20 @@
 
 <!-- Header
 ============================================= -->
-<header id="header" class="border-bottom-0 no-sticky transparent-header">
+<header id="header" class="border-bottom-0 transparent-header">
     <div id="header-wrap">
         <div class="container">
-            <div class="header-row">
+            <div class="header-row justify-content-lg-between">
 
                 <!-- Logo
                 ============================================= -->
                 <div id="logo">
-                    <a href="{% url 'home' %}" class="standard-logo"><img class="lazyload" data-src="{% static 'images/logo.png' %}"
-                            height="100px" width="100px" alt="Edavids Logo"></a>
-                    <a href="{% url 'home' %}" class="retina-logo"><img class="lazyload" data-src="{% static 'images/logo@2x.png' %}"
-                            height="100px" width="100px" alt="Edavids Logo"></a>
+                    <a href="{% url 'home' %}" class="standard-logo"><img class="lazyload"
+                            data-src="{% static 'images/logo.png' %}" height="100px" width="100px"
+                            alt="Edavids Logo"></a>
+                    <a href="{% url 'home' %}" class="retina-logo"><img class="lazyload"
+                            data-src="{% static 'images/logo@2x.png' %}" height="100px" width="100px"
+                            alt="Edavids Logo"></a>
                 </div><!-- #logo end -->
 
                 <div class="header-misc">
@@ -39,15 +41,24 @@
                     <ul class="menu-container">
                         <li class="menu-item"><a class="menu-link" href="{% url 'about' %}">
                                 <div>About me</div>
-                            </a></li>
+                            </a>
+                        </li>
                         <li class="menu-item"><a class="menu-link" href="{% url 'under-construction' %}">
                                 <div>Works</div>
-                            </a></li>
+                            </a>
+                        </li>
+                        {% if not request.path == "/contact/" %}
                         <li class="menu-item"><a class="menu-link" href="#" data-scrollto="#footer"
                                 data-easing="easeInOutExpo" data-speed="1250" data-offset="70">
-                                <div>Contact</div>
-                            </a></li>
-                    </ul>
+                                <div>Subscribe</div>
+                            </a>
+                        </li>
+                        {% endif %}
+                        <li class="menu-item"><a class="menu-link" href="{% url 'contact' %}">
+                            <div>Contact</div>
+                        </a>
+                    </li>
+                </ul>
 
                 </nav><!-- #primary-menu end -->
 
