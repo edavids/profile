@@ -8,7 +8,7 @@ from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 from django.contrib.sitemaps.views import sitemap
 from config.sitemaps import StaticViewSitemap
-from edavids.utils.views import Contact
+from edavids.utils.views import contact_page
 
 sitemaps = {
     "static": StaticViewSitemap,
@@ -41,7 +41,7 @@ urlpatterns = [
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
-    path("contact/", Contact.as_view(), name="contact"),
+    path("contact/", contact_page, name="contact"),
     path(
         "projects/",
         TemplateView.as_view(template_name="pages/construction.html"),
