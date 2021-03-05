@@ -7,7 +7,7 @@
   <!-- <script data-ad-client="ca-pub-6675078631224950" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" defer></script> -->
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{% block title %}ME EDAVIDS{% endblock title %}</title>
+  <title>{% block title %}MAIL FROM EDAVIDS{% endblock title %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{% block description %}{% endblock description %}">
   <meta name="author" content="David Jeremiah">
@@ -48,48 +48,37 @@
   <!-- Your stuff: Third-party CSS libraries go here -->
   {% compress css inline %}
   <!-- This file stores project-specific CSS -->
-
+  {% include 'includes/pagecss.html' %}
   {% endcompress %}
   {% endblock %}
 
   {{form.media}}
 </head>
 
-<body {% block bodyclass %}{% endblock bodyclass %}>
+<body class="stretched">
+  <div class="container">
+    <div class="clearfix" id="wrapper">
+      {% include 'includes/nav.html' %}
 
-  {% block mainpage %}{% endblock mainpage %}
+      {% block mainpage %}{% endblock mainpage %}
 
-  {% block shoppage %}{% endblock shoppage %}
-
-  {% block blogpage %}{% endblock blogpage %}
-
-  {% block modal %}{% endblock modal %}
-
-
+      {% include 'includes/footer.html' %}
+    </div>
+  </div>
   <!-- Le javascript
     ================================================== -->
   {# Placed at the top of the document so pages load faster with defer #}
   {% block javascript %}
 
+  {% compress js inline %}
+  {% include 'includes/pagejs.html' %}
+  {% endcompress %}
 
 
   <!-- place project specific Javascript in this file -->
-  {% compress js inline %}
-  <script defer type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
-  <script defer type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
-  {% endcompress %}
-
   {% endblock javascript %}
 
 
-
-  {% block inline_javascript %}
-  {# Script tags with only code, no src (defer by default) #}
-  {% endblock inline_javascript %}
-
-
-  {% load sweetify %}
-  {% sweetify %}
 
 </body>
 

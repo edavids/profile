@@ -23,8 +23,8 @@ def contact_page(request):
             send_mail(
                 subject, 
                 message, 
-                "noreply@edavids.me", 
-                [settings.DEFAULT_FROM_EMAIL], 
+                settings.DEFAULT_FROM_EMAIL, 
+                ["hello@gmail.com"], 
                 fail_silently=False
             )
         except BadHeaderError:

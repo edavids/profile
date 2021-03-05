@@ -1,0 +1,35 @@
+{% extends 'account/email/base.html' %}
+{% load account i18n %}
+
+
+{% block title %}Email Confirmation{% endblock title%}
+
+{% block mainpage %}
+<section id="slider" class="slider-element min-vh-md-100 py-4 include-header"
+  style="background: #FFF url('{% static 'images/hero/hero-bg.svg' %}') repeat top center; background-size: cover; min-height: 100vh">
+  <div class="slider-inner">
+    <div class="vertical-middle slider-element-fade">
+      <div class="container text-center py-5">
+        {% autoescape off %}
+        <div class="emphasis-title mb-2">
+          <h4>
+            {% blocktrans with site_name=current_site.name site_domain=current_site.domain %}Thank you for joining
+            <strong>{{ site_domain }}</strong>{% endblocktrans %}
+          </h4>
+        </div>
+        <div class="mx-auto" style="max-width: 600px">
+          <p class="lead font-weight-normal text-dark mb-5">{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+            You're receiving this e-mail because user <span class="user-name">{{ user_display }}</span> has given your e-mail address to register an account on {{ site_domain }}.
+            {% endblocktrans %}</p>
+          <a href="{{activate_url}}"
+            class="button button-dark button-hero h-translatey-3 tf-ts button-reveal overflow-visible bg-dark text-right"><span>Activate Account</span><i class="icon-line-arrow-right"></i></a>
+          <a href="{% url 'contact' %}" data-offset="70"
+            class="button button-large button-light text-dark bg-transparent m-0"><i
+              class="icon-line2-arrow-down font-weight-bold"></i> <u>Make a Complain</u></a>
+        </div>
+        {% endautoescape %}
+      </div>
+    </div>
+  </div>
+</section><!-- #slider end -->
+{% endblock mainpage %}
