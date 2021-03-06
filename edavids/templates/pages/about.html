@@ -21,8 +21,8 @@ david{% endblock keywords %}
   <section id="content">
     <div class="content-wrap p-0">
       <div class="container mw-md mt-5">
-        <h1 class="display-3 font-weight-bolder text-uppercase">About Me<br><span
-            class="gradient-text gradient-horizon" property="jeremiah david">
+        <h1 class="display-3 font-weight-bolder text-uppercase">About Me<br><span class="gradient-text gradient-horizon"
+            property="jeremiah david">
             Edavids</span></h2>
           <div class="row mt-4">
             <div class="col-md-8 offset-1">
@@ -37,29 +37,11 @@ david{% endblock keywords %}
           </div>
 
       </div>
-      <div class="section text-center mb-0">
-        <div class="mw-xs mx-auto ">
-          <h3 class="display-4 font-weight-bolder text-uppercase">I Do It with <span
-              class="gradient-text gradient-horizon" property="edavids clients">Them</span></h3>
-          <p class="mt-4">Due years of <span property="jeremiah david experience">experience</span> i have been able to
-            partner with these companies</p>
-
-          <div class="clear"></div>
-
-          <div class="row justify-content-center align-items-center mt-4 col-mb-30">
-            <div class="col-md-4 col-6 center"><img class="lazyload" data-src="{% static 'images/clients/amazon.svg' %}"
-                alt="Clients" width="100" height="100"></div>
-            <div class="col-md-4 col-6 center"><img class="lazyload" data-src="{% static 'images/clients/google.svg' %}"
-                alt="Clients" width="100" height="100"></div>
-            <div class="col-md-4 col-6 center"><img class="lazyload" data-src="{% static 'images/clients/paypal.svg' %}"
-                alt="Clients" width="100" height="100"></div>
-            <div class="col-md-4 col-6 center"><img class="lazyload" data-src="{% static 'images/clients/ps.svg' %}"
-                alt="Clients" width="100" height="100"></div>
-          </div>
-        </div>
-      </div>
+      {% include 'includes/service.html' %}
+      {% include 'includes/faqs.html' %}
     </div>
   </section>
+
 
 
 

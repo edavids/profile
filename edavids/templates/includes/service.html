@@ -1,38 +1,75 @@
+{% load static %}
+
 <div class="section bg-transparent py-5">
 
   <div class="container">
     <div class="row align-items-end mb-5">
       <div class="col-lg-5 offset-lg-1">
         <h3 class="font-weight-bolder h1">The ways I can help you</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam minima error ducimus recusandae sed ipsam, cumque optio reiciendis nihil labore!</p>
       </div>
     </div>
 
-    <div  class="row gutter-50 mb-5 align-items-stretch">
+    <div class="row gutter-50 mb-5 align-items-stretch">
       <div class="col-md-4">
         <div class="card d-flex align-items-end flex-column p-4 border-0" style="background-color: #E2E8D8;">
           <div class="mt-5"></div>
           <div class="mt-auto">
             <div class="card-body">
               <div class="d-flex align-items-center mb-4">
-                <img src="demos/freelancer/images/icons/sketch.svg" height="50" alt="Image">
-                <img src="demos/freelancer/images/icons/xd.png" height="50" alt="Image" class="ml-3">
+                <img class="lazyload" data-src="{% static 'images/icons/sketch.svg' %}" height="50" alt="Image">
+                <img class="lazyload" data-src="{% static 'images/icons/xd.png' %}" height="50" alt="Image"
+                  class="ml-3">
               </div>
-              <h3 class="card-title font-weight-bolder">Website Design</h3>
-              <p class="card-text mb-0 mt-2 font-weight-light">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p>
+              <h3 class="card-title font-weight-bolder gradient-text gradient-horizon">Design</h3>
+              <hr>
+              <div class="card-text mb-0 mt-2 font-weight-light">
+                <p>
+                  I value simple content structure, clean design patterns, and thoughtful interactionsI
+                </p>
+                <hr>
+                <h4 class="mb-0  gradient-text gradient-horizon">Things I enjoy designing</h4>
+                <p>UX, UI, Web, Mobile, Apps, Logos</p>
+                <h4 class="mb-0 gradient-text gradient-horizon">Design Tools</h4>
+                <p class="mb-0">Figma</p>
+                <p class="mb-0">Sketch</p>
+                <p class="mb-0">Adobe XD</p>
+                <p class="mb-0">Adobe Illustrator</p>
+                <p class="mb-0">Adobe Photoshop</p>
+                <p class="mb-0">Marvel</p>
+                <p class="mb-0">Pen & Paper</p>
+                <p>Invision</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-4">
-        <div class="card d-flex align-items-end flex-column p-4 border-0" style="background-color: #C2DFEC;">
+        <div class="card d-flex align-items-end flex-column p-4 border-0" style="background-color: #fef4f4;">
           <div class="mt-5"></div>
           <div class="mt-auto">
             <div class="card-body">
-              <img src="demos/seo/images/icons/social.svg" alt="Image" class="mb-4" height="50">
-              <h3 class="card-title font-weight-bolder">Responsive Website</h3>
-              <p class="card-text mb-0 mt-2 font-weight-light">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p>
+              <img class="lazyload" data-src="{% static 'images/icons/social.svg' %}" alt="Image" class="mb-4"
+                height="50">
+              <h3 class="card-title font-weight-bolder gradient-text gradient-horizon">Fullstack Development</h3>
+              <hr>
+              <div class="card-text mb-0 mt-2 font-weight-light">
+                <p>
+                  I like to code things from scratch, and enjoy bringing ideas to life in the browser.
+                </p>
+                <hr>
+                <h4 class="mb-0  gradient-text gradient-horizon">Languages I speak</h4>
+                <p>HTML, CSS, Scss, JavaScript, React, Flutter, Python, Ruby, Node, NextJS</p>
+                <h4 class="mb-0 gradient-text gradient-horizon">Dev Tools</h4>
+                <p class="mb-0">VS Code</p>
+                <p class="mb-0">Github</p>
+                <p class="mb-0">Heroku</p>
+                <p class="mb-0">Namecheap</p>
+                <p class="mb-0">Chrome Dev Tools</p>
+                <p class="mb-0">Bootstrap</p>
+                <p class="mb-0">Codepen</p>
+                <p>Terminal</p>
+              </div>
             </div>
           </div>
         </div>
@@ -43,9 +80,25 @@
           <div class="mt-5"></div>
           <div class="mt-auto">
             <div class="card-body">
-              <img src="demos/freelancer/images/icons/wp.png" height="50" alt="Image" class="mb-4">
-              <h3 class="card-title font-weight-bolder">WordPress Website</h3>
-              <p class="card-text mb-0 mt-2 font-weight-light">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p>
+              <img class="lazyload" data-src="{% static 'images/icons/research.svg' %}" height="50" alt="Image" class="mb-4">
+              <h3 class="card-title font-weight-bolder gradient-text gradient-horizon">Mentorship</h3>
+              <hr>
+              <div class="card-text mb-0 mt-2 font-weight-light">
+                <p>
+                  I genuinely care about people, and love helping fellow designers work on their craft.
+                </p>
+                <hr>
+                <h4 class="mb-0  gradient-text gradient-horizon">Experience I draw from</h4>
+                <p>UX/UI, Product design, Freelancing, Web Development</p>
+                <h4 class="mb-0 gradient-text gradient-horizon">Mentor Stats</h4>
+                <p class="mb-0">5 Years Experience</p>
+                <p class="mb-0">2 Mentored Students</p>
+                <p class="mb-0">3 Bootcamps</p>
+                <p class="mb-0">120+ Mentor Sessions</p>
+                <p class="mb-0">2 Group Critiques</p>
+                <p>2+ Tuts Topics</p>
+                <br>
+              </div>
             </div>
           </div>
         </div>
@@ -56,9 +109,9 @@
           <div class="mt-5"></div>
           <div class="mt-auto">
             <div class="card-body">
-              <img src="demos/seo/images/icons/seo.svg" height="50" alt="Image" class="mb-4">
-              <h3 class="card-title font-weight-bolder">SEO Optimised</h3>
-              <p class="card-text mb-0 mt-2 font-weight-light">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p>
+              <img class="lazyload" data-src="{% static 'images/icons/seo.svg' %}" height="50" alt="Image" class="mb-4">
+              <h3 class="card-title font-weight-bolder gradient-text gradient-horizon">SEO Optimised</h3>
+              <p class="card-text mb-0 mt-2 font-weight-light">I enjoy improving the quality and quantity of website traffic to a website or a web page from search engines</p>
             </div>
           </div>
         </div>
@@ -69,9 +122,12 @@
           <div class="mt-5"></div>
           <div class="mt-auto">
             <div class="card-body">
-              <img src="demos/freelancer/images/icons/hosting.svg" height="50" alt="Image" class="mb-4">
-              <h3 class="card-title font-weight-bolder">Web Hosting</h3>
-              <p class="card-text mb-0 mt-2 font-weight-light">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p>
+              <img class="lazyload" data-src="{% static 'images/icons/hosting.svg' %}" height="50" alt="Image"
+                class="mb-4">
+              <h3 class="card-title font-weight-bolder gradient-text gradient-horizon">Web Hosting</h3>
+              <p class="card-text mb-0 mt-2 font-weight-light">
+                Developing technoly software is one thing, allowing these individual and organizational softwares to be accessible via the World Wide Web I offer quality Hosting Services.
+              </p>
             </div>
           </div>
         </div>
@@ -82,9 +138,12 @@
           <div class="mt-5"></div>
           <div class="mt-auto">
             <div class="card-body">
-              <img src="demos/freelancer/images/icons/plugins.png" height="50" alt="Image" class="mb-4">
-              <h3 class="card-title font-weight-bolder">Plugin Development</h3>
-              <p class="card-text mb-0 mt-2 font-weight-light">Objectively productivate interoperable process improvements after team building testing procedures. Distinctively architect resource-leveling portals.</p>
+              <img class="lazyload" data-src="{% static 'images/icons/plugins.png' %}" height="50" alt="Image"
+                class="mb-4">
+              <h3 class="card-title font-weight-bolder gradient-text gradient-horizon">Plugin Development</h3>
+              <p class="card-text mb-0 mt-2 font-weight-light">
+                I enjoy creating plugin and extentions for VS Code.
+              </p>
             </div>
           </div>
         </div>
@@ -94,4 +153,25 @@
 
   <div class="clear"></div>
 
+  <div class="container mt-6">
+    <div class="row align-items-end">
+      <div class="col-lg-6 offset-lg-1">
+        <h3 class="font-weight-bolder h1">We value our relationships</h3>
+        <p>Due years of <span property="jeremiah david experience">experience</span> i have been able to
+          partner with these companies</p>
+      </div>
+    </div>
+    <div class="section rounded-10 p-6 my-4" style="background-color: #F1F1F1;">
+      <div class="row justify-content-between align-items-center col-mb-50">
+        <div class="col-md-3 col-6 center"><img class="lazyload" data-src="{% static 'images/clients/amazon.svg' %}"
+            alt="Clients" width="100" height="100"></div>
+        <div class="col-md-3 col-6 center"><img class="lazyload" data-src="{% static 'images/clients/google.svg' %}"
+            alt="Clients" width="100" height="100"></div>
+        <div class="col-md-3 col-6 center"><img class="lazyload" data-src="{% static 'images/clients/paypal.svg' %}"
+            alt="Clients" width="100" height="100"></div>
+        <div class="col-md-3 col-6 center"><img class="lazyload" data-src="{% static 'images/clients/ps.svg' %}"
+            alt="Clients" width="100" height="100"></div>
+      </div>
+    </div>
+  </div>
 </div>
